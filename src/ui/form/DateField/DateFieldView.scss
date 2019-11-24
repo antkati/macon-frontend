@@ -1,0 +1,153 @@
+@import "style/variables";
+
+.DateFieldView {
+  position: relative;
+
+  &__label {
+    font-size: 20px;
+    color: $lipstick;
+    letter-spacing: 0.15px;
+    cursor: pointer;
+
+    &:hover {
+      color: #ba000d;
+    }
+  }
+
+  &__drop-down {
+    position: absolute;
+    top: calc(100% + 8px);
+    width: 256px;
+    padding: 0px 12px;
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.12);
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: -27px;
+      left: 25px;
+      background: white;
+      border: 6px solid transparent;
+      transform: rotate(45deg) translateX(15px) translateY(15px);
+      box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.12);
+    }
+  }
+
+
+  &__row-year {
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.06);
+    position: relative;
+    z-index: 1;
+    background: #ffffff;
+    border-radius: 8px 8px 0px 0px;
+    margin-right: -12px;
+    margin-left: -12px;
+  }
+
+  &__radio {
+    display: none;
+  }
+
+  &__radio-label-month {
+    padding: 17px 0px;
+    margin: 0;
+    font-size: 13px;
+    color: $black;
+    letter-spacing: 0.1px;
+  }
+
+  &__radio-label-year {
+    padding: 11px 0px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.12px;
+    color: $black;
+  }
+
+  &__radio-label-month,
+  &__radio-label-year {
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__radio:checked + &__radio-label-month,
+  &__radio:checked + &__radio-label-year {
+    color: $lipstick;
+  }
+
+  &__radio:disabled + &__radio-label-month {
+    color: #919191;
+    pointer-events: none;
+
+  }
+
+
+  &__arrow-icon {
+    cursor: pointer;
+
+    svg {
+      width: 7px;
+      height: 12px;
+    }
+  }
+
+  &__arrow-icon_color_black {
+    path {
+      fill: #181818;
+    }
+  }
+
+  &__arrow-icon_color_red {
+    margin-left: 8px;
+
+    path {
+      fill: $lipstick;
+    }
+  }
+
+  &__arrow-icon_direction_right {
+    svg {
+      transform: rotate(180deg);
+    }
+
+  }
+
+
+  &__arrow-icon_direction_down {
+    svg {
+      transform: rotate(270deg);
+    }
+  }
+
+  &__arrow-icon_direction_up {
+    svg {
+      transform: rotate(90deg);
+    }
+  }
+
+  &__arrow-icon_disabled {
+    pointer-events: none;
+
+    svg {
+      opacity: 0.5;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    &__drop-down {
+      transform: translateX(-50%);
+
+
+      &:after {
+        left: 153px;
+      }
+    }
+  }
+
+}

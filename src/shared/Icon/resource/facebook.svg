@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Publications" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Publications-(Article)-/-Mobile" transform="translate(-180.000000, -2798.000000)">
+            <g id="Footer/Mobile" transform="translate(0.000000, 2764.000000)">
+                <g id="Social">
+                    <g>
+                        <g id="Override/Footer/Social" transform="translate(170.000000, 24.000000)">
+                            <g id="Icons/facebook" transform="translate(10.000000, 10.000000)">
+                                <g id="Facebook">
+                                    <rect id="Shape" x="0" y="0" width="16" height="16" rx="8"></rect>
+                                    <path d="M12,5.53326433 L9.61604597,5.53326433 L9.61604597,4.08023184 C9.61604597,3.53454771 10.005212,3.40732768 10.2793122,3.40732768 C10.5527887,3.40732768 11.9616447,3.40732768 11.9616447,3.40732768 L11.9616447,1.00840406 L9.6447345,1 C7.0727459,1 6.48743763,2.78919478 6.48743763,3.93417512 L6.48743763,5.53326433 L5,5.53326433 L5,8.00521631 L6.48743763,8.00521631 C6.48743763,11.177603 6.48743763,15 6.48743763,15 L9.61604597,15 C9.61604597,15 9.61604597,11.1399296 9.61604597,8.00521631 L11.7271472,8.00521631 L12,5.53326433 Z" id="Path" fill="#AAAAAA" fill-rule="nonzero"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

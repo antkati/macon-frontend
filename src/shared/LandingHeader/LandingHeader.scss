@@ -1,0 +1,72 @@
+@import "style/variables";
+
+.LandingHeader {
+
+  &__main-nav {
+    display: flex;
+    height: 64px;
+  }
+
+  &__logo-img {
+    width: 84px;
+  }
+
+
+  &__nav-item {
+    margin-right: 0px;
+    display: flex;
+    letter-spacing: 0.44px;
+
+    a {
+      padding: 0px 16px;
+      display: flex;
+      align-items: center;
+    }
+
+    &_active {
+      a {
+        color: #fff;
+      }
+
+    }
+  }
+
+  &__burger {
+    svg {
+      width: 24px;
+    }
+  }
+
+  &__user-icon  {
+    svg {
+      width: 23px;
+    }
+  }
+
+  &__burger,
+  &__user-icon {
+    path {
+      fill: #ffffff;
+      transition: opacity $short-effect;
+    }
+
+    &:hover {
+      path {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__search {
+    margin-right: 20px;
+
+    svg {
+      width: 24px;
+
+      path {
+        fill: $lipstick;
+      }
+    }
+  }
+
+}

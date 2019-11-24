@@ -1,0 +1,150 @@
+@import "style/variables";
+
+.Header {
+  background-color: #ffffff;
+  box-shadow: 0 5px 8px -3px rgba(0, 0, 0, 0.06);
+  position: relative;
+  z-index: $zindex-sticky;
+
+  &__row {
+    height: $header;
+  }
+
+  &__logo-img {
+    width: 84px;
+  }
+
+  &__row-white {
+    position: relative;
+    background: #ffffff;
+    border-radius: 10px 10px 0px 0px;
+    z-index: 50;
+    height: 16px;
+  }
+
+  &__nav-item {
+    margin-right: 0px;
+    display: flex;
+
+    a {
+      padding: 0px 16px;
+      display: flex;
+      align-items: center;
+    }
+
+    &_active {
+      a {
+        color: #181818;
+      }
+    }
+  }
+
+  &__sub-nav {
+    border-top: solid 1px #eeeeee;
+  }
+
+  &__sub-nav-ul {
+    display: flex;
+    list-style: none;
+  }
+
+  &__sub-nav-item {
+
+    &:not(:last-child) {
+      margin-right: 32px;
+    }
+
+    a {
+      height: $subNavHeader;
+      display: flex;
+      align-items: center;
+      border-bottom: transparent 2px solid;
+    }
+
+    &_active {
+      a {
+        color: #181818;
+        border-bottom-color: #ca2025;
+      }
+    }
+  }
+
+
+  &__burger {
+    svg {
+      width: 24px;
+    }
+  }
+
+  &__user-icon  {
+    svg {
+      width: 23px;
+    }
+  }
+
+  &__burger,
+  &__user-icon {
+    path {
+      fill: #ffffff;
+      transition: opacity $short-effect;
+    }
+
+    &:hover {
+      path {
+        opacity: 0.8;
+      }
+    }
+  }
+
+
+
+  @media screen and (max-width: 991px) {
+    box-shadow: none;
+
+    &__main-nav {
+      background-color: $black;
+    }
+
+    &__logo-img {
+      width: 67px;
+    }
+
+    &__row {
+      height: 56px;
+    }
+
+    &__sub-nav {
+      border: none;
+      box-shadow: 0 5px 8px -3px rgba(0, 0, 0, 0.06);
+    }
+
+    &__sub-nav-row {
+      height: 33px;
+      overflow: hidden;
+    }
+
+    &__sub-nav-col {
+      overflow-x: scroll;
+      cursor: grab;
+      -webkit-overflow-scrolling: touch;
+      height: 60px;
+    }
+
+    &__sub-nav-item {
+      flex-shrink: 0;
+
+      &:not(:last-child) {
+        margin-right: 24px;
+      }
+
+      a {
+        height: 33px;
+        align-items: flex-start;
+      }
+    }
+
+
+  }
+
+
+}

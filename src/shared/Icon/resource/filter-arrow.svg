@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 7 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Company" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="News-/-HD-(Pick-Year)" transform="translate(-303.000000, -230.000000)">
+            <g id="Page-Header" transform="translate(150.000000, 120.000000)">
+                <g id="Filter" transform="translate(129.000000, 64.000000)">
+                    <g id="Group-+-Group-2-Mask" transform="translate(0.000000, 24.000000)">
+                        <g id="Group-2" transform="translate(0.000000, 8.000000)">
+                            <g id="Left" transform="translate(16.000000, 8.000000)">
+                                <polygon id="Path" points="0 0 24 0 24 24 0 24"></polygon>
+                                <path d="M14.7057692,15.8842316 L10.83,12 L10.83,12 L14.7057692,8.11576839 C15.0948293,7.72585884 15.094485,7.09448505 14.705,6.705 C14.3156393,6.31563925 13.6843607,6.31563925 13.295,6.705 L8,12 L8,12 L13.295,17.295 C13.6843607,17.6843607 14.3156393,17.6843607 14.705,17.295 C15.094485,16.905515 15.0948293,16.2741412 14.7057692,15.8842316 Z" id="Path" fill-rule="nonzero"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

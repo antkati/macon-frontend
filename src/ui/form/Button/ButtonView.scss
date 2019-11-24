@@ -1,0 +1,187 @@
+@import 'style/variables';
+
+$root: '.ButtonView';
+
+.ButtonView {
+
+  &_btn {
+    font-size: 14px;
+    font-weight: 400;
+    border: none;
+    box-shadow: none;
+    outline: none;
+
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
+
+  &_link {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+
+  &_color_btn_primary {
+    background: $lipstick;
+    color: $white;
+    letter-spacing: 1.25px;
+    border-radius: 4px;
+    padding: 9px 26px;
+    transition: background $short-effect;
+
+    &:hover {
+      color: $white;
+      background: #ba000d;
+    }
+
+    &:disabled {
+      background: #eeeeee;
+      color: #cccccc;
+      pointer-events: none;
+    }
+  }
+
+  &_color_btn_info {
+    background: $lipstick;
+    color: $white;
+    letter-spacing: normal;
+    border-radius: 16px;
+    padding: 8px 24px;
+    transition: background $short-effect;
+
+    &:hover {
+      color: $white;
+      background: #ba000d;
+    }
+  }
+
+  &_color_btn_light {
+    padding: 14px 24px;
+    border-radius: 24px;
+    background-color: rgb(240, 225, 225);
+    font-size: 16px;
+    color: $lipstick;
+    transition: opacity $short-effect;
+
+    &:hover {
+      color: $lipstick;
+      opacity: $opacity;
+    }
+  }
+
+  &_color_btn_dark {
+    padding: 8px 0px;
+    border: 2px solid rgb(24, 24, 24);
+    border-radius: 17px;
+    background-color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 0.44px;
+    color: #000000;
+    transition: opacity $short-effect;
+
+    &:hover {
+      opacity: $opacity;
+      border: 2px solid rgba(24, 24, 24, 0.8);
+    }
+  }
+
+  &_color_link_light {
+    color: #919191;
+    letter-spacing: 0.44px;
+    transition: color $short-effect;
+
+    &:hover {
+      color: $black;
+      text-decoration: none;
+    }
+  }
+
+  &_color_link_primary {
+    color: $lipstick;
+    font-size: 14px;
+    letter-spacing: 0.44px;
+    transition: all $short-effect;
+
+    &:hover {
+      color: $lipstick;
+    }
+  }
+
+  &_color_link_dark {
+    color: rgba(255, 255, 255, 0.48);
+    font-size: 14px;
+    transition: color $short-effect;
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.3);
+      text-decoration: none;
+    }
+  }
+
+  &_color_link_info {
+    color: #2196f3;
+    font-size: 14px;
+  }
+
+  &_color_link_secondary {
+    letter-spacing: 1.13px;
+    color: $white;
+    font-size: 18px;
+    font-weight: 500;
+    transition: opacity $short-effect;
+    position: relative;
+
+    #{$root}__icon {
+      position: absolute;
+      right: 0;
+      transform: translateX(calc(100% + 16px));
+      transition: transform $short-effect;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: $white;
+      opacity: $opacity;
+
+      #{$root}__icon {
+        transform: translateX(calc(100% + 25px));
+      }
+    }
+
+    @media screen and (max-width: 991px) {
+      font-size: 14px;
+      letter-spacing: 0.88px;
+
+      #{$root}__icon {
+        transform: translateX(calc(100% + 12px));
+      }
+
+      &:hover {
+        #{$root}__icon {
+          transform: translateX(calc(100% + 21px));
+        }
+      }
+    }
+  }
+
+  &__preloader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.ButtonView_disabled.ButtonView_color_btn_light {
+  background-color: rgb(238, 238, 238);
+  color: #cccccc;
+  pointer-events: none;
+}
+

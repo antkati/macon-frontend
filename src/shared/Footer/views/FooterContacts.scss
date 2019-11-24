@@ -1,0 +1,96 @@
+@import "style/variables";
+@import 'style/helpers/mixins';
+
+.FooterContacts {
+  $root: &;
+
+  margin-top: 37px;
+
+  &__contacts-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__label {
+    color: $white;
+    font-size: 14px;
+  }
+
+  &__address,
+  &__phone,
+  &__email {
+    margin-left: 8px;
+    color: rgba(255, 255, 255, 0.48);
+    font-size: 14px;
+    transition: color $short-effect;
+  }
+
+  &__address:hover,
+  &__phone:hover,
+  &__email:hover {
+    color: rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+  }
+
+
+  &_mobile {
+    margin: 0px -#{$mobile-gutters};
+    padding: 0px $content-mobile-gutters;
+    background: #ffffff;
+    border-radius: 0px 0px 10px 10px;
+
+    #{$root}__label {
+      color: $black;
+      opacity: 0.8;
+    }
+
+    #{$root}__address,
+    #{$root}__phone,
+    #{$root}__email {
+      color: $black;
+    }
+
+    #{$root}__phone:hover,
+    #{$root}__email:hover {
+      color: $black;
+      opacity: 0.8;
+    }
+
+    #{$root}__contacts-item {
+      margin-bottom: 0px;
+      padding: 5px 0px;
+    }
+
+    #{$root}__contacts-list {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__heading-btn {
+    color: #909090;
+    font-size: 14px;
+    letter-spacing: 0.44px;
+    padding: 14px 0px;
+    cursor: pointer;
+  }
+
+  &__arrow-icon {
+    svg {
+      transform: rotate(270deg);
+      width: 7px;
+      height: 12px;
+    }
+
+    path {
+      fill: #909090;
+    }
+
+    &_opened {
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+
+
+}

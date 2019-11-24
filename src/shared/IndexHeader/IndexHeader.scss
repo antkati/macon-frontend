@@ -1,0 +1,220 @@
+@import 'style/variables';
+
+.IndexHeader {
+  $root: &;
+  padding: 24px 0px;
+
+  &__logo {
+    width: 103px;
+  }
+
+  &__logo_red {
+    display: none;
+  }
+
+  .form-group {
+    margin: 0;
+  }
+
+  &__burger-btn,
+  &__user-btn,
+  &__search-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $white;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.16);
+  }
+
+  &__burger-icon {
+    svg {
+      width: 20px;
+    }
+  }
+
+  &__search-icon {
+    svg {
+      width: 24px;
+    }
+
+    path {
+      fill: #a3a3a3;
+    }
+  }
+
+  &__user-icon  {
+    svg {
+      width: 23px;
+    }
+
+    path {
+      fill: #a3a3a3;
+    }
+  }
+
+  &__user-icon,
+  &__search-icon,
+  &__burger-icon {
+    path {
+      transition: opacity $short-effect;
+    }
+  }
+
+  &__burger-btn,
+  &__search-btn,
+  &__user-btn {
+    cursor: pointer;
+
+    &:hover {
+      path {
+        opacity: $opacity;
+      }
+    }
+  }
+
+  &__search-wrap {
+    height: 48px;
+    position: relative;
+  }
+
+  &__nav {
+    position: absolute;
+    top: 0;
+    left: 12px;
+    right: 12px;
+    height: 100%;
+    opacity: 0;
+    transition: opacity $short-effect;
+    z-index: 1;
+
+    &.open {
+      opacity: 1;
+      z-index: 10;
+    }
+  }
+
+  &__nav-item {
+    margin-right: 0px;
+    display: flex;
+
+  }
+
+  &__header-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-size: 16px !important;
+    letter-spacing: 0.5px !important;
+    padding: 0px 16px;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.6) !important;
+    }
+  }
+
+
+  @media screen and (max-width: 991px) {
+    & {
+      background-color: $black;
+      padding: 8px 0px;
+    }
+
+    &__row {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__logo-wrap {
+      order: 1;
+      flex-basis: 0;
+      flex-grow: 1;
+      max-width: 100%;
+      text-align: center;
+    }
+
+    &__logo {
+      width: 67px;
+    }
+
+    &__logo_red {
+      display: block;
+    }
+
+    &__logo_white {
+      display: none;
+    }
+
+    &__burger-btn,
+    &__user-btn {
+      background: transparent;
+      border-radius: 0;
+      width: auto;
+      height: auto;
+      box-shadow: none;
+    }
+
+    &__search-icon,
+    &__user-icon,
+    &__burger-icon {
+      path {
+        fill: #fff;
+      }
+    }
+
+    &__burger-icon {
+      svg {
+        width: 24px;
+      }
+    }
+
+    &__search-wrap {
+      display: none;
+    }
+
+    &__burger-wrap {
+      order: 0;
+    }
+
+    &__user-wrap {
+      order: 3;
+    }
+  }
+
+
+  &_isSearchPage {
+    & {
+      padding: 8px 0px 0px;
+    }
+
+    #{$root}__logo_red {
+      display: block;
+    }
+
+    #{$root}__logo_white {
+      display: none;
+    }
+
+    @media screen and (max-width: 991px) {
+       #{$root}__search-wrap {
+          display: block;
+          height: auto;
+          position: relative;
+          z-index: $zindex-dropdown;
+          order: 4;
+          width: 100% !important;
+          flex-basis: auto !important;
+          max-width: none !important;
+          background: #fff;
+          border-radius: 10px 10px 0px 0px;
+          margin-top: 8px;
+          padding: 9px 8px !important;
+      }
+    }
+  }
+}
+
+
+

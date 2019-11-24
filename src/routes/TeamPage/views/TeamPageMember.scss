@@ -1,0 +1,150 @@
+@import "style/variables";
+@import '~bootstrap/scss/mixins/breakpoints';
+
+.TeamPageMember {
+  display: flex;
+  width: 100%;
+
+  &__cancel {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.04);
+    background-color: rgba(255, 255, 255, 0.56);
+    border-radius: 50%;
+    z-index: 10;
+    cursor: pointer;
+    transition: opacity $short-effect;
+
+    &:hover {
+      opacity: $opacity;
+    }
+  }
+
+  &__cancel-icon {
+    svg {
+      width: 8px;
+    }
+
+    path {
+      fill: #545352;
+    }
+  }
+
+  &__photo {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: -30%;
+    width: 100%;
+    background-size: cover;
+    background-position: top;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    align-items: flex-end;
+    padding-top: 362px;
+    padding-right: 128px;
+
+    & > * {
+      width: 432px;
+    }
+  }
+
+  &__name,
+  &__workPosition {
+    margin-bottom: 4px;
+  }
+
+  &__workPosition {
+    letter-spacing: 0.5px;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 16px;
+  }
+
+  &__email {
+    margin-bottom: 86px;
+  }
+
+  &__email-link {
+    color: $lipstick;
+    letter-spacing: 0.5px;
+    font-size: 16px;
+
+    &:hover {
+      color: $lipstick;
+    }
+  }
+
+  &__text {
+    color: $black;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    margin-bottom: 60px;
+
+    p {
+      margin-bottom: 21px;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    & {
+      flex-direction: column;
+    }
+
+    &__photo {
+      position: absolute;
+      height: 250px;
+      top: 0;
+      bottom: auto;
+      left: 0;
+      right: 0;
+    }
+
+
+    &__body {
+      margin-top: 250px;
+      padding-top: 24px;
+      padding-right: 0px;
+
+      & > * {
+        width: 100%;
+      }
+    }
+
+    &__body_without-photo {
+      margin-top: 0px;
+      padding-top: 48px;
+    }
+
+    &__name {
+      margin-bottom: 8px;
+    }
+
+    &__email {
+      margin-bottom: 27px;
+    }
+
+    &__text {
+      margin-bottom: 0px;
+
+      p {
+        margin-bottom: 16px;
+      }
+    }
+
+  }
+
+}

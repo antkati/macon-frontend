@@ -1,0 +1,31 @@
+@import "style/variables";
+
+.ArticleSliderArrow {
+  position: absolute;
+  top: 175px;
+  transform: translateY(-50%);
+  z-index: $zindex-dropdown;
+
+  &__arrow-icon svg {
+    fill: $white;
+    width: 18px;
+    cursor: pointer;
+    opacity: 0.8;
+
+  }
+
+
+  &__arrow-icon_direction_left svg {
+    transform: rotate(180deg);
+  }
+
+}
+
+.ArticleSliderArrow_direction_right {
+  right: 23px;
+}
+
+.ArticleSliderArrow_direction_left {
+  left: 23px;
+}
+

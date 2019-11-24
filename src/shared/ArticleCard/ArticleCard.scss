@@ -1,0 +1,197 @@
+@import "style/variables";
+
+$root: '.ArticleCard';
+
+.ArticleCard {
+  margin-bottom: 24px;
+  display: flex;
+  width: 100%;
+
+  &__card {
+    &, &:hover {
+      text-decoration: none !important;
+      box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.1);
+      width: 100%;
+    }
+  }
+
+  &__thumbnail {
+    position: relative;
+    display: flex;
+    background-size: cover;
+  }
+
+  &__card > .ButtonView__label {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  &__date {
+    color: $lipstick;
+    text-transform: uppercase;
+    letter-spacing: 1.25px;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__views {
+    display: flex;
+    align-items: center;
+    color: #666666;
+    font-size: 12px;
+    font-style: italic;
+  }
+
+  &__pdf-icon {
+    svg {
+      fill: #676767;
+      width: 24px;
+    }
+  }
+
+  &__tags {
+    margin-bottom: 15px;
+  }
+
+  &__info {
+    margin-top: auto;
+    align-items: center;
+  }
+
+  &__view-icon {
+    margin-right: 7px;
+  }
+
+  &__view-icon  {
+    svg {
+      width: 15px;
+    }
+  }
+
+  &__source {
+    padding-top: 16px;
+    letter-spacing: 1.75px;
+    font-size: 14px;
+  }
+
+  &__source-date {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    background-color: rgba(0, 0, 0, 0.48);
+    border-radius: 16px;
+    padding: 7px 20px;
+    font-size: 14px;
+    letter-spacing: 0.11px;
+    color: #fff;
+  }
+
+  @media screen and (max-width: 991px) {
+    .card {
+      padding: $content-mobile-gutters;
+      width: 100%;
+      border-radius: 0 !important;
+
+      &, &:hover {
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03),
+          0 -1px 2px 0 rgba(0, 0, 0, 0.03);
+      }
+    }
+
+    .card-title {
+      font-size: 14px;
+      font-weight: 400;
+      max-height: 53px;
+      overflow: hidden;
+    }
+
+    .card-text {
+      display: none;
+    }
+
+    .card-body {
+      padding: 0px 0px 0px 12px;
+    }
+
+    & {
+      padding: 0px !important;
+    }
+
+    &__card > .ButtonView__label {
+      flex-direction: row;
+    }
+
+    &__thumbnail {
+      flex-shrink: 0;
+      width: 96px !important;
+      height: 96px !important;
+      border-radius: 4px !important;
+    }
+
+    &__source {
+      letter-spacing: 1.25px;
+      font-size: 10px;
+      text-transform: uppercase;
+      padding-top: 0px;
+      margin-top: auto;
+    }
+  }
+
+  &_first {
+    .card-img {
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+      min-height: 350px;
+    }
+
+    @media screen and (max-width: 991px) {
+      #{$root}__thumbnail {
+        border-radius: 0px !important;
+      }
+
+      .card {
+        padding: 0px;
+      }
+
+      .card-body {
+        padding: $content-mobile-gutters;
+      }
+
+      .card-title {
+        font-size: 16px;
+      }
+
+      .card-text {
+        display: block;
+      }
+
+      .card-img {
+        border-radius: 0;
+        min-height: 200px;
+        width: 100% !important;
+      }
+
+      .no-gutters.row {
+        margin-right: 0px !important;
+        margin-left: 0px !important;
+      }
+    }
+  }
+
+  &_SearchPage {
+    @media screen and (max-width: 991px) {
+      &:not(:last-child) {
+        margin-bottom: 0px;
+      }
+
+      .card {
+        &, &:hover {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
+

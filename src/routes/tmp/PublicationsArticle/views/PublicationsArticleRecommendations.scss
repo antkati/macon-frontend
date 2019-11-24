@@ -1,0 +1,25 @@
+.PublicationsArticleRecommendations {
+  .card {
+    padding: 19px 23px;
+  }
+
+  .card:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+  .card-title {
+    font-size: 24px;
+  }
+
+  .card-text {
+    font-size: 16px;
+  }
+
+  &__date {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 1.25px;
+    color: rgba(0, 0, 0, 0.8);
+    text-transform: uppercase;
+  }
+}

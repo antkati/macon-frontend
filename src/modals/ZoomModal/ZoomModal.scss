@@ -1,0 +1,18 @@
+@import 'style/variables';
+
+
+.ZoomModal {
+
+  &__img-wrap {
+    border-radius: 4px;
+    overflow: hidden;
+    background: #ffffff;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+}
+
+

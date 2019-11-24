@@ -1,0 +1,52 @@
+@import "style/variables";
+
+.PublicationsItem {
+  &__col {
+    margin-bottom: 24px;
+    display: flex;
+  }
+
+  &__inner-col {
+    display: flex;
+  }
+
+  &__card-img {
+    width: 655px;
+    height: 350px;
+    border-radius: 0px 4px 4px 0px;
+  }
+
+  &__date {
+    color: $lipstick;
+    text-transform: uppercase;
+    letter-spacing: 1.25px;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__views {
+    display: flex;
+    align-items: center;
+    color: #666666;
+    font-size: 12px;
+    font-style: italic;
+  }
+
+  &__tags {
+    margin-bottom: 15px;
+  }
+
+  &__info {
+    margin-top: auto;
+    align-items: center;
+  }
+
+  &__view-icon {
+    margin-right: 7px;
+  }
+
+  &__view-icon svg {
+    width: 18px;
+  }
+}

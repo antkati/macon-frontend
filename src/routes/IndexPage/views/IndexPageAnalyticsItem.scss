@@ -1,0 +1,149 @@
+@import "style/variables";
+
+.IndexPageAnalyticsItem {
+  $root: &;
+
+  .card-body {
+    height: 247px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-title {
+    max-height: 75px;
+    overflow: hidden;
+  }
+
+  .card-text {
+    max-height: 76px;
+    overflow: hidden;
+  }
+
+  &__card {
+    display: flex;
+    text-decoration: none;
+    transition: all $short-effect;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__img {
+    height: 225px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px 4px 0px 0px;
+  }
+
+  &__date {
+    color: rgba(0, 0, 0, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 1.25px;
+    font-size: 10px;
+    margin-top: auto;
+  }
+
+  &__hr {
+    width: 48px;
+    height: 1px;
+    background-color: rgb(230, 230, 230);
+    margin-top: 12px;
+  }
+
+  &_main {
+    #{$root}__card:hover {
+      box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &_short {
+    flex: 0 !important;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
+    #{$root}__card:hover {
+      opacity: 0.64;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    .card-title {
+      font-weight: 400;
+      font-size: 14px;
+      max-height: 53px;
+    }
+
+    .card-text {
+      display: none;
+    }
+
+    &__date {
+      color: $lipstick;
+    }
+
+    &__hr {
+      margin-top: 16px;
+    }
+
+    &_main {
+      margin-bottom: 24px !important;
+      padding: 0px !important;
+
+      &:first-child {
+        margin-bottom: 16px !important;
+      }
+
+      #{$root}__card {
+        padding: $content-mobile-gutters;
+        width: 100%;
+        border-radius: 0 !important;
+
+        &, &:hover {
+          box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03),
+            0 -1px 2px 0 rgba(0, 0, 0, 0.03) !important;
+        }
+      }
+
+      #{$root}__card > .ButtonView__label {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .card-body {
+        padding: 0px 0px 0px 12px;
+        height: auto;
+      }
+
+      #{$root}__img {
+        flex-shrink: 0;
+        width: 96px !important;
+        height: 96px !important;
+        border-radius: 4px !important;
+      }
+    }
+
+    &_short {
+      padding: 0px $content-mobile-gutters !important;
+
+      & {
+        margin-bottom: 16px !important;
+
+        &:last-child {
+          margin-bottom: 32px !important;
+        }
+      }
+    }
+
+
+
+
+
+  }
+
+}
+
+
+

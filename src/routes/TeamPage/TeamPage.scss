@@ -1,0 +1,85 @@
+@import 'style/variables';
+
+.TeamPage {
+  position: relative;
+  height: calc(100vh - 121px);
+  overflow: hidden;
+
+  &__content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+  }
+
+  &__team-member-wrap {
+    width: calc(100% - 375px);
+    height: 100%;
+    overflow: hidden;
+  }
+
+  &__list-wrap {
+    width: 375px;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  &__team-member {
+    height: 100%;
+    width: calc(100% + 20px);
+    overflow: auto;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% + 20px);
+    height: 100%;
+    padding: 33px 0px;
+    overflow: auto;
+  }
+
+  &:after {
+    position: absolute;
+    z-index: 6;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    height: 56px;
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+  }
+
+  @media screen and (max-width: 991px) {
+    & {
+      height: auto;
+      padding: 16px;
+    }
+
+    &:after {
+      display: none;
+    }
+
+
+    &__content {
+      height: auto;
+      display: block;
+    }
+
+
+    &__team-member-wrap,
+    &__list-wrap,
+    &__team-member,
+    &__list {
+      width: 100%;
+      height: auto;
+    }
+
+
+    &__list {
+      display: block;
+      padding: 0px;
+    }
+  }
+
+}

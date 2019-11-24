@@ -1,0 +1,66 @@
+@import "style/variables";
+@import 'style/helpers/mixins';
+
+.FooterNav {
+  $root: &;
+
+  &__heading {
+    color: $white;
+    font-weight: 400;
+    margin-bottom: 26px;
+  }
+
+  &__nav-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__heading-btn {
+    color: #909090;
+    font-size: 14px;
+    letter-spacing: 0.44px;
+    padding: 14px 0px;
+    cursor: pointer;
+  }
+
+  &_mobile {
+    border-bottom: 1px solid rgb(235, 235, 237);
+
+    #{$root}__nav-link {
+      color: $black;
+      font-size: 14px;
+      letter-spacing: 0.44px;
+
+      &:hover {
+        color: $black;
+        opacity: 0.8;
+      }
+    }
+
+    #{$root}__nav-item {
+      margin: 0px;
+      padding: 5px 0px;
+    }
+
+    #{$root}__nav {
+      margin: 0px 0px 16px 0px;
+    }
+  }
+
+  &__arrow-icon {
+    svg {
+      transform: rotate(270deg);
+      width: 7px;
+      height: 12px;
+    }
+
+    path {
+      fill: #909090;
+    }
+
+    &_opened {
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}

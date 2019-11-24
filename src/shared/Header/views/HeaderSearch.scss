@@ -1,0 +1,13 @@
+@import "style/variables";
+
+.HeaderSearch {
+  margin-right: 20px;
+
+  svg {
+    width: 24px;
+
+    path {
+      fill: $lipstick;
+    }
+  }
+}

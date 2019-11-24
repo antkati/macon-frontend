@@ -1,0 +1,49 @@
+@import 'style/variables';
+
+
+.EditProfileModal {
+  &__body {
+    width: 100%;
+    padding: 24px;
+  }
+
+  &__form {
+    margin-top: 24px;
+  }
+
+  .form-group {
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+
+  &__change-password {
+    font-size: 14px;
+    margin-bottom: 16px;
+    letter-spacing: 0.11px;
+  }
+
+  &__submit {
+    margin-top: 42px;
+  }
+
+  &__back {
+    display: inline-block;
+    padding: 5px 5px 5px 0px;
+    cursor: pointer;
+
+    &:hover {
+      svg {
+        opacity: $opacity;
+      }
+    }
+
+    svg {
+      transition: opacity $short-effect;
+    }
+  }
+}
+
+

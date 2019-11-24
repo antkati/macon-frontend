@@ -1,0 +1,278 @@
+@import "style/variables";
+
+
+.IndexPageProjectsItem {
+  $root: &;
+
+  &__card {
+    height: 350px;
+    overflow: hidden;
+    margin-bottom: 24px;
+
+    &:hover {
+      text-decoration: none !important;
+      box-shadow: 0 5px 12px 0 rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__card > .ButtonView__label {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  &__section {
+    text-transform: uppercase;
+    letter-spacing: 0.1px;
+  }
+
+  &__date {
+    letter-spacing: 1.25px;
+    font-size: 10px;
+    text-transform: uppercase;
+  }
+
+  &__card-title {
+    font-size: 24px;
+    line-height: 1.33;
+    font-weight: 400;
+    margin: 10px 0px 24px;
+    max-height: 93px;
+    overflow: hidden;
+  }
+
+  &__card-text {
+    font-size: 16px !important;
+    max-height: 132px;
+    overflow: hidden;
+  }
+
+  &_small {
+    #{$root}__card {
+      background-size: cover;
+    }
+
+    #{$root}__image {
+      position: absolute;
+      z-index: 1;
+      background-size: cover;
+      top: 0px;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+    }
+
+    #{$root}__gradient {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 63%);
+      justify-content: flex-end;
+    }
+
+    #{$root}__card-body {
+      position: relative;
+    }
+
+    #{$root}__card-body:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #fff;
+      opacity: 0;
+      transform: translateY(7px);
+      transition: opacity ease-in 0.2s 0.05s, transform ease-in 0.15s;
+      z-index: 1;
+    }
+
+    #{$root}__section,
+    #{$root}__card-title,
+    #{$root}__card-text,
+    #{$root}__date {
+      transition: all ease-in 0.2s;
+      position: relative;
+      z-index: 2;
+    }
+
+    #{$root}__gradient:hover #{$root}__card-body:after {
+      transition: opacity ease-in 0.15s, transform ease-in 0.1s 0.05s;
+      opacity: 1;
+      transform: translateY(0px);
+    }
+
+    #{$root}__gradient:hover #{$root}__card-title {
+      color: #000000;
+    }
+
+    #{$root}__gradient:hover #{$root}__date {
+      color: rgba(0, 0, 0, 0.8);
+    }
+
+    #{$root}__card-title {
+      color: $white;
+    }
+
+    #{$root}__date {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    #{$root}__card-body {
+      flex: 0 !important;
+    }
+  }
+
+  &_wide {
+    #{$root}__col-body {
+      display: flex;
+    }
+
+    #{$root}__card-title {
+      color: $black;
+    }
+
+    #{$root}__image {
+      border-radius: 4px 0px 0px 4px;
+      background-size: cover;
+      height: 350px;
+      width: 100%;
+    }
+
+    #{$root}__date {
+      color: rgba(0, 0, 0, 0.8);
+      margin-top: auto;
+    }
+  }
+
+
+  @media screen and (max-width: 991px) {
+    padding: 0px !important;
+
+    &__card {
+      height: auto;
+      padding: $content-mobile-gutters;
+      width: 100%;
+      border-radius: 0 !important;
+      margin-bottom: 16px !important;
+
+      &, &:hover {
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03),
+          0 -1px 2px 0 rgba(0, 0, 0, 0.03) !important;
+      }
+    }
+
+    &__card > .ButtonView__label {
+      flex-direction: row;
+    }
+
+    &__card-title {
+      max-height: 53px;
+    }
+
+    &__card-body {
+      padding: 0px !important;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    &_small {
+      #{$root}__gradient {
+        display: flex;
+        background-image: none;
+        padding-left: 12px;
+      }
+
+      #{$root}__card-body:after {
+        display: none;
+      }
+
+      #{$root}__section {
+        display: none;
+      }
+
+      #{$root}__card-title {
+        margin: 0px;
+        font-size: 14px;
+        color: $black;
+      }
+
+      #{$root}__card-text {
+        display: none;
+      }
+
+      #{$root}__date {
+        color: $lipstick;
+        margin-top: auto;
+      }
+
+      #{$root}__image {
+        position: static;
+        flex-shrink: 0;
+        width: 96px !important;
+        height: 96px !important;
+        border-radius: 4px !important;
+      }
+    }
+
+
+    &_wide {
+      .row {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        flex-wrap: nowrap;
+      }
+
+      .col-7,
+      .col-5 {
+        margin: 0;
+        padding: 0;
+      }
+
+      .col-7 {
+        width: auto;
+        flex: 0 0 auto;
+      }
+
+      .col-5 {
+        margin-left: 12px;
+        flex: 1 0 auto;
+        width: calc(100% - 108px);
+        max-width: none;
+      }
+
+      #{$root}__image {
+        position: static;
+        flex-shrink: 0;
+        width: 96px !important;
+        height: 96px !important;
+        border-radius: 4px !important;
+      }
+
+      #{$root}__section {
+        display: none;
+      }
+
+      #{$root}__card-title {
+        margin: 0px;
+        font-size: 14px;
+        color: $black;
+      }
+
+      #{$root}__card-text {
+        display: none;
+      }
+
+      #{$root}__date {
+        color: $lipstick;
+        margin-top: auto;
+      }
+    }
+  }
+}
+

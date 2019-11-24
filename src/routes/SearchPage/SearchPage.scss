@@ -1,0 +1,19 @@
+@import "style/variables";
+
+.SearchPage {
+  background: #fafafa;
+  min-height: calc(100vh - #{$footer});
+
+  &__list {
+    padding: 17px 0px;
+
+    .PaginationButtonView {
+      margin-top: 16px;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    background: #ffffff;
+  }
+
+}

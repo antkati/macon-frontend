@@ -1,0 +1,56 @@
+@import "style/variables";
+
+.IndexSliderArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: $zindex-dropdown;
+
+  &__arrow-icon svg {
+    fill: rgba(255, 255, 255, 0.32);;
+    width: 46px;
+    cursor: pointer;
+    transition: fill $short-effect;
+
+    &:hover {
+      fill: $white;
+    }
+  }
+
+  &__arrow-icon_direction_left svg {
+    transform: rotate(180deg);
+  }
+
+  &_direction_right {
+    right: 40px;
+  }
+
+  &_direction_left {
+    left: 40px;
+  }
+
+  @media screen and (max-width: 1450px) {
+
+    &_direction_right {
+      right: 17px;
+    }
+
+    &_direction_left {
+      left: 17px;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+
+    &_direction_right {
+      right: 13px;
+    }
+
+    &_direction_left {
+      left: 13px;
+    }
+  }
+
+}
+
+

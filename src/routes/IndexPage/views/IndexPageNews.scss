@@ -1,0 +1,43 @@
+@import 'style/variables';
+
+.IndexPageNews {
+  padding: 60px 0px;
+
+  &__title {
+    margin-bottom: 32px;
+  }
+
+  &__heading {
+    color: $black;
+  }
+
+  .all-news-link.ButtonView_color_link_primary {
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: 991px) {
+    padding: 0px;
+    background: #fafafa;
+
+    &__title {
+      padding-top: 34px;
+      background: #fff;
+      margin-bottom: 0px;
+      position: relative;
+      z-index: 2;
+
+      & > .col {
+        padding: 0px $content-mobile-gutters;
+      }
+    }
+
+    &__heading {
+      font-size: 16px;
+    }
+
+    .all-news-link.ButtonView_color_link_primary {
+      font-size: 14px;
+    }
+  }
+
+}

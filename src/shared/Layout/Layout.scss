@@ -1,0 +1,19 @@
+@import 'style/variables';
+
+.Layout {
+  &, &__main-wrapper {
+    min-height: 100vh;
+  }
+
+  &__main-wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    & > * {
+      width: 100%;
+    }
+  }
+
+
+}

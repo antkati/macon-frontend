@@ -1,0 +1,81 @@
+@import 'style/variables';
+
+.IndexPageServices {
+  background: url('../../../../public/images/services-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  margin: 0 auto;
+
+
+  &__slide-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 600px;
+    padding: 34px 24px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.48);
+    transition: all $short-effect;
+
+    &:hover {
+      border-right: 1px solid rgba(255, 255, 255, 0.6);
+      border-left: 1px solid rgba(255, 255, 255, 0.6);
+      background: rgba(0, 0, 0, 0.56);
+    }
+  }
+
+
+  &__slide-title {
+    color: $white;
+    margin-bottom: 16px;
+  }
+
+  &__slide-description {
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  &__slide-text {
+    transform: translateY(37px);
+    transition: all ease-in 0.15s;
+  }
+
+  &__slide-btn {
+    opacity: 0;
+    margin-top: 24px;
+    transform: translateY(37px);
+    transition: opacity ease-in 0.15s, transform ease-in 0.15s, background $short-effect !important;
+  }
+
+
+  &__slide:hover &__slide-btn {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  &__slide:hover &__slide-text {
+    transform: translateY(0px);
+  }
+
+  @media screen and (max-width: 991px) {
+    &__slide-body {
+      height: 320px;
+      padding: 24px 20px;
+    }
+
+    &__slide-title {
+      font-size: 20px;
+      letter-spacing: normal;
+    }
+
+    &__slide-description {
+      font-size: 14px;
+      line-height: 1.57;
+      letter-spacing: 0.44px;
+    }
+  }
+}

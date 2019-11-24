@@ -1,0 +1,17 @@
+@import "style/variables";
+
+.PublicationsArticleShared {
+
+  &__social-item:not(:last-child) {
+    margin-right: 15px !important;
+  }
+
+  &__social-icon svg {
+    width: 20px;
+  }
+
+  &__shared {
+    margin-top: 24px;
+    padding: 0px 64px;
+  }
+}

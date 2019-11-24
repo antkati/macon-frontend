@@ -1,0 +1,23 @@
+@import "style/variables";
+
+.Publications {
+  background-color: #fafafa;
+
+  &__title {
+    margin-right: 16px;
+  }
+
+
+  &__sort {
+    padding: 64px 0px 24px 0px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__hr {
+    height: 1px;
+    width: 100%;
+    border-bottom: 1px solid #f0f0f0;
+    margin-top: 12px;
+  }
+}

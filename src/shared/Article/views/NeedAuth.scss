@@ -1,0 +1,30 @@
+@import "style/variables";
+@import 'style/helpers/mixins';
+
+.NeedAuth {
+
+  background-color: #f5f5f5;
+  width: 100%;
+  padding: 40px;
+
+  .card-body {
+    padding: 40px;
+  }
+
+  .card-title {
+    max-width: 400px;
+    font-size: 20px;
+    margin: 0px auto 16px auto;
+  }
+
+  .card-text {
+    font-size: 16px;
+    color: $black;
+    letter-spacing: 0.15px;
+  }
+
+  &__sign-in-btn {
+    margin: 0px auto 44px;
+  }
+
+}

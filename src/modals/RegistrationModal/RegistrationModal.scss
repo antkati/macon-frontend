@@ -1,0 +1,96 @@
+@import 'style/variables';
+
+.RegistrationModal {
+  .FieldLayoutView {
+    margin-bottom: 30px !important;
+  }
+
+  &__left-col {
+    width: 259px;
+    height: 100%;
+    background: url('../../../public/images/modal-background.png');
+    background-size: cover;
+    border-radius: 8px 0px 0px 8px;
+  }
+
+  &__right-col {
+    display: flex;
+    flex-direction: column;
+    padding: 48px 32px 15px 32px;
+    width: calc(100% - 259px);
+  }
+
+  &__title {
+    color: $black;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    color: $black;
+    font-size: 14px;
+    margin-bottom: 48px;
+    letter-spacing: 0.1px;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 32px;
+  }
+
+  &__submit {
+    margin-left: 24px;
+  }
+
+  &__step {
+    color: $lipstick;
+    font-size: 14px;
+    letter-spacing: 1.25px;
+  }
+
+  &__confirmation {
+    text-align: center;
+  }
+
+  &__logo {
+    width: 80px;
+    margin: 24px 0px 0px 24px;
+  }
+
+  &__offer-login {
+    margin-top: auto;
+    padding-top: 13px;
+    border-top: 1px solid rgba(204, 204, 204, 0.32);
+  }
+
+  &__offer-login-text {
+    font-size: 13px;
+    color: #bbbbbb;
+    letter-spacing: 0.12px;
+    margin-right: 7px;
+  }
+
+  &__offer-login-link {
+    font-size: 13px !important;
+    letter-spacing: 0.12px !important;
+  }
+
+  @media screen and (max-width: 767px) {
+    &__right-col {
+      width: 100%;
+      padding: 35px 16px 20px;
+    }
+
+    &__offer-login {
+      border: none;
+      margin: 132px auto 0px;
+    }
+
+    .FieldLayoutView {
+      margin-bottom: 20px !important;
+    }
+  }
+
+}
+

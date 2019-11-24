@@ -1,0 +1,16 @@
+.PaginationButtonView {
+  margin: 16px 0px 40px;
+
+  &__item:not(:last-child) {
+    margin-right: 24px !important;
+  }
+
+  @media screen and (max-width: 991px) {
+    margin: 0px;
+    margin-top: -24px;
+    padding: 24px 0px;
+    background: #ffffff;
+    text-align: center;
+  }
+
+}

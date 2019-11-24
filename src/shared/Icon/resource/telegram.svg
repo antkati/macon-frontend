@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Publications" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Publications-(Article)-/-Mobile" transform="translate(-28.000000, -218.000000)" fill="#AAAAAA" fill-rule="nonzero">
+            <g id="Group" transform="translate(20.000000, 210.000000)">
+                <g id="Share-Widget">
+                    <g id="Telegram">
+                        <g id="Icons/Telegram" transform="translate(8.000000, 8.000000)">
+                            <g id="Telegram" transform="translate(0.000000, 2.000000)">
+                                <path d="M15.2104124,1.16828187 L12.9085016,12.0240746 C12.7348394,12.7902508 12.2819316,12.9808912 11.6383171,12.6200373 L8.13098446,10.0354321 L6.43866528,11.6631544 C6.25140725,11.8504124 6.09472332,12.0070964 5.73380311,12.0070964 L5.98575751,8.43496788 L12.4862674,2.56099482 C12.7688953,2.30904041 12.4249865,2.16940104 12.0469886,2.4213886 L4.0107772,7.48150052 L0.551096373,6.39867358 C-0.201450777,6.16369741 -0.215046632,5.64609326 0.70771399,5.28517306 L14.2399337,0.0718259067 C14.8664373,-0.163117098 15.414715,0.211398964 15.2104124,1.16828187 Z" id="Path"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

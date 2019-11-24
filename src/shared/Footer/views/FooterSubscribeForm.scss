@@ -1,0 +1,68 @@
+@import "style/variables";
+@import 'style/helpers/mixins';
+
+.FooterSubscribeForm {
+  &__heading {
+    color: $white;
+    font-weight: 400;
+    margin-bottom: 26px;
+  }
+
+  &__text {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: normal;
+    color: #868686;
+  }
+
+  &__hr {
+    width: 225px;
+    height: 1px;
+    box-shadow: 0 -1px 0 0 rgb(51, 51, 51);
+  }
+
+  &__form-row {
+    width: 100%;
+    align-items: flex-end;
+
+    button {
+      margin-bottom: 1rem;
+    }
+  }
+
+
+
+  &__input {
+    input {
+      padding: 9px 16px;
+      border: none !important;
+      font-size: 14px;
+      font-weight: 400;
+      border-radius: 4px;
+      color: #fff;
+      background-color: rgb(33, 33, 33);
+
+      @include placeholder {
+        color: rgba(255, 255, 255, 0.32);
+        letter-spacing: 1.25px;
+      }
+
+      &:focus {
+        background-color: rgb(33, 33, 33);
+      }
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    & {
+      margin: 24px -#{$mobile-gutters} 0px;
+      padding: 0px $content-mobile-gutters;
+    }
+
+    &__heading {
+      font-size: 16px;
+    }
+
+  }
+
+}

@@ -1,0 +1,75 @@
+@import "style/variables";
+@import 'style/helpers/mixins';
+
+
+
+.InputFieldView {
+  $root: &;
+
+  &__input {
+    position: relative;
+    width: 100%;
+    padding: 10px 16px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.13px;
+    transition: all $short-effect;
+
+    &:focus {
+      border: 1px solid #cccccc;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.06);
+      background: #f7f7f7;
+      outline: none;
+    }
+
+    @include placeholder {
+      color: #aaaaaa;
+      letter-spacing: 0.13px;
+    }
+  }
+
+  &_isFeedbackForm {
+    #{$root}__input {
+      width: 100%;
+      height: 44px;
+      background: #f5f5f5;
+      border-radius: 4px;
+      border: none;
+      padding: 16px;
+      letter-spacing: -0.13px;
+      font-size: 16px;
+      transition: background $short-effect;
+
+      @include placeholder {
+        letter-spacing: -0.13px;
+        color: rgba(24, 24, 24, 0.48);
+      }
+
+      &:focus {
+        outline: none;
+        border: none;
+        box-shadow: none;
+        background: #efefef;
+      }
+    }
+  }
+
+  &_isInvalid {
+    #{$root}__input {
+      background-color: #ffe6e6;
+      border: 1px solid $orangey-red;
+      color: $orangey-red;
+
+      @include placeholder {
+        color: $orangey-red;
+      }
+    }
+  }
+
+}
+
+
+
+

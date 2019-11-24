@@ -1,0 +1,66 @@
+@import 'style/variables';
+
+.IndexPageHeader {
+  $root: &;
+
+  height: 100vh;
+  background: url('../../../../public/images/header-background.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 48px;
+
+  &__heading {
+    color: $white;
+    margin-bottom: 32px;
+  }
+
+  &__subtitle {
+    color: $white;
+    margin-bottom: 48px;
+    width: 70%;
+    font-size: 20px;
+  }
+
+
+  @media screen and (max-width: 991px) {
+    height: auto;
+    background: $black;
+    padding-bottom: 0px;
+
+    &__heading {
+      font-size: 20px;
+      margin-bottom: 16px;
+      letter-spacing: normal;
+    }
+
+    &__subtitle {
+      width: 100%;
+      font-size: 14px;
+      margin-bottom: 24px;
+      letter-spacing: 0.11px;
+    }
+
+    &__title {
+      background: url('../../../../public/images/header-background.jpg');
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px 10px 0px 0px;
+      padding: 176px 0 24px;
+    }
+
+    &__content {
+      margin: 0px -#{$mobile-gutters};
+      padding: 0px $content-mobile-gutters;
+    }
+
+    &__arrow {
+      svg {
+         width: 22px;
+        height: 12px;
+      }
+    }
+  }
+}

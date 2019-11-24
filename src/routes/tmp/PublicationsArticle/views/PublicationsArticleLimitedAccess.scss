@@ -1,0 +1,116 @@
+@import "style/variables";
+
+.PublicationsArticleLimitedAccess {
+
+  &__article.col {
+    margin: 40px 0px;
+    max-width: 768px;
+    background-color: $white;
+    border-radius: 8px;
+    border: solid 1px rgb(242, 242, 242);
+    padding: 60px 0px 0px 0px;
+  }
+
+  &__heading {
+    margin-bottom: 36px;
+    padding: 0px 64px;
+    font-size: 36px;
+    letter-spacing: 1.13px;
+    font-weight: 400;
+    color: $black;
+  }
+
+  &__info {
+    padding: 0px 64px;
+    font-size: 14px;
+  }
+
+  &__time,
+  &__views {
+    color: $grey;
+    letter-spacing: 0.44px;
+  }
+
+  &__body {
+    margin: 32px 0px 40px 0px;
+    font-family: 'Open Sans';
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    color: rgb(40, 40, 40);
+    font-size: 16px;
+  }
+
+  &__p {
+    padding: 0px 64px;
+  }
+
+  &__p:not(:last-child) {
+    margin-bottom: 24px;
+    padding: 0px 64px;
+  }
+
+  &__image-card {
+    padding: 26px 48px 40px 48px;
+  }
+
+  &__image-wrap {
+    padding: 32px;
+    border-radius: 6px;
+    background-color: rgb(250, 240, 240);
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__shared {
+    margin-top: 24px;
+    padding: 0px 64px;
+  }
+
+  &__download-pdf.ButtonView_color_btn_light {
+    padding: 4px 16px 4px 4px;
+    font-size: 14px;
+  }
+
+  &__pdf-icon {
+    margin-right: 8px;
+  }
+
+  &__pdf-icon svg {
+    width: 24px;
+    fill: $lipstick;
+  }
+
+  &__pdf-icon.disabled svg {
+    fill: #cccccc;
+  }
+
+  &__limited-access {
+    border-radius: 0px 0px 8px 8px;
+    background-color: rgb(250, 240, 240);
+    width: 100%;
+    padding: 40px;
+
+    .card-body {
+      padding: 40px;
+    }
+
+    .card-title {
+      max-width: 400px;
+      font-size: 20px;
+      margin: 0px auto 16px auto;
+    }
+
+    .card-text {
+      font-size: 16px;
+      color: $black;
+      letter-spacing: 0.15px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__sign-in-btn {
+    margin: 0 auto;
+  }
+}

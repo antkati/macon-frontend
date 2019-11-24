@@ -1,0 +1,36 @@
+@import "style/variables";
+
+.ArticlesPage {
+  background-color: #fafafa;
+  flex-grow: 2;
+
+  &__title {
+    margin-right: 16px;
+  }
+
+  &__sort {
+    position: relative;
+    z-index: $zindex-dropdown;
+    padding: 64px 0px 24px 0px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__hr {
+    height: 1px;
+    width: 100%;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  @media screen and (max-width: 991px) {
+    &__container-fluid {
+      background-color: #fafafa;
+    }
+
+    &__sort {
+      padding: 16px 0px 0px 0px;
+      background: #ffffff;
+    }
+  }
+
+}
